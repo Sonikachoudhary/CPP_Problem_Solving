@@ -1,30 +1,21 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Employee {
-private:
-    string name;
-    int id;
-    float salary;
-
-public:
-    // Constructor
-    Employee(string n, int i, float s) {
-        name = n;
-        id = i;
-        salary = s;
-    }
-
-    void display() {
-        cout << "Name: " << name << endl;
-        cout << "ID: " << id << endl;
-        cout << "Salary: " << salary << endl;
-    }
-};
-
 int main() {
-    Employee e1("Sonika",122, 50000);
-    e1.display();
+    int n, sum = 0;
+
+    cout << "Enter size of array: ";
+    cin >> n;
+
+    int arr[n];
+
+    cout << "Enter array elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
+
+    cout << "Sum of array elements = " << sum;
 
     return 0;
 }
